@@ -1,0 +1,22 @@
+/* Apply styles to the navbar */
+.navbar {
+    background-color: #f8f9fa; /* Background color */
+    padding: 10px 20px; /* Add padding to the navbar */
+}
+
+/* Style the navbar links */
+.navbar-brand {
+    font-size: 1.5em; /* Set the font size */
+    color: #007bff; /* Set the text color */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline */
+    margin-right: 50px; /* Add margin to the right of each navbar brand */
+
+}
+
+  
+
+/* Add spacing between the brand and other elements */
+.container-fluid:not(:first-child) {
+    margin-left: 20px;
+}

@@ -1,0 +1,37 @@
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .delete-button {
+    background: none;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+
+  }
+  
+  .event-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-item h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .event-item p {
+    font-size: 0.9em;
+    color: #555;
+  }
+  

@@ -1,0 +1,27 @@
+<div class="quiz-info">
+    <h1>Quiz: {{quiz.nom}}</h1>
+    <h2>Instructions: {{quiz.description}}</h2>
+    <h3>duration: {{quiz.duree}} minute</h3>
+</div>
+<form (ngSubmit)="submitTentative()">
+    <div *ngFor="let question of quiz.questions">
+        <p>Question: {{id + 1}}</p>
+        <p>{{question.text}}</p>
+        <div *ngIf="question.choix_multiple">
+            <p>more than one answer is possible</p>
+            <div *ngFor="let option of question.options">
+                <input type="checkbox" name="option" value="{{option.id}}">{{option.text}}
+            </div>
+        </div>
+        <div *ngIf="!question.choix_multiple">
+            <p>only one answer is possible</p>
+            <div *ngFor="let option of question.options">
+                <input type="radio" name="option" value="{{option.id}}">{{option.text}}
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </div>
+</form>

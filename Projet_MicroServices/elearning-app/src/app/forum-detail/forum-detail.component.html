@@ -1,0 +1,31 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8">
+        <div *ngIf="forum" class="card">
+          <div class="card-body">
+            <h2 class="card-title">{{ forum.titre }}</h2>
+            <p class="card-text">{{ forum.description }}</p>
+          </div>
+
+        </div>
+        <div class="forum-posts">
+            <div *ngFor="let post of posts.postResponses" class="forum-post">
+              <a [routerLink]="['/comment', post.postId]">{{ post.title }}</a>
+              <p>UserName : {{ post.username }}</p>
+              <p>Description : {{ post.content }}</p>
+            </div>
+          </div>
+          <form >
+            <input type="text" name="username" placeholder="desc" [(ngModel)]="username" >
+
+            <input type="text" name="content" placeholder="content" [(ngModel)]="content" >
+            <input type="text" name="title" placeholder="desc" [(ngModel)]="title" >
+            <button class="btn btn-primary" (click)="addPost()">Add Post</button>
+          </form>
+          
+      </div>
+      
+       
+    </div>
+  </div>
+  

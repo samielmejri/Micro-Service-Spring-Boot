@@ -1,0 +1,6 @@
+<div class="course-list">
+  <div *ngFor="let coursItem of cours" class="course-item">
+    <a [routerLink]="['/cours', coursItem.id]">{{ coursItem.title }}</a>
+    <p>{{ coursItem.description }}</p>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="event-list">
+  <div *ngFor="let eventItem of events" class="event-item">
+    <div class="header">
+      <h2 class="title">{{ eventItem.title }}</h2>
+      <button class="delete-button" (click)="deleteEvent(eventItem._id)">X</button>
+    </div>
+    <p class="date">{{ eventItem.date | date:'yyyy-MM-dd' }}</p>
+    <p class="description">{{ eventItem.description }}</p>
+  </div>
+</div>

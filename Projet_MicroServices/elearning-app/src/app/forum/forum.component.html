@@ -1,0 +1,16 @@
+<div class="forum-posts">
+    <div *ngFor="let forum of forums" class="forum-post">
+      <a [routerLink]="['/forum', forum.id]">{{ forum.titre }}</a>
+      <p>Description : {{ forum.description }}</p>
+
+    </div>
+    <div>
+      <form >
+        <input type="text" name="titre" placeholder="Titre" [(ngModel)]="titre" >
+        <input type="text" name="description" placeholder="desc" [(ngModel)]="description" >
+        <button class="btn btn-primary" (click)="addForum()">Add Forum</button>
+      </form>
+
+    </div>
+  </div>
+  

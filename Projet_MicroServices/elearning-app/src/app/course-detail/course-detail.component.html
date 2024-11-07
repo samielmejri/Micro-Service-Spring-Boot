@@ -1,0 +1,40 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8">
+      <div *ngIf="course" class="card">
+        <div class="card-body">
+          <h2 class="card-title">{{ course.title }}</h2>
+          <p class="card-text">{{ course.description }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title mb-4">Comments</h3>
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let comment of comments" class="list-group-item">
+              <div class="comment-header d-flex justify-content-between align-items-center">
+                <span class="comment-author">Anonymous User</span>
+              </div>
+              <div class="comment-content">
+                {{ comment }}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h3 class="card-title mb-4">Add a Comment</h3>
+          <form (submit)="addComment()">
+            <div class="form-group">
+              <input type="text" [(ngModel)]="newComment" name="newComment" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color: #007bff;">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

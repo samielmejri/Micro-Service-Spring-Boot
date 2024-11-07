@@ -1,0 +1,12 @@
+<div class="quiz-list">
+    <div *ngFor="let quiz of quizzes">
+        <div class="quiz" (click)="goToDetails(quiz.id)" >
+            <h2>{{ quiz.nom }}</h2>
+            <h3>{{quiz.description}}</h3>
+            <h4> {{quiz.duree}} minutes</h4>
+            <button (click)="deleteQuiz(quiz.id)">delete</button>
+        </div>
+
+    </div>
+
+</div>

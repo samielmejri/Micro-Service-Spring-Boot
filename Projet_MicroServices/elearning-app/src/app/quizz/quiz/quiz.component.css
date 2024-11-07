@@ -1,0 +1,43 @@
+/* quiz-list: Container for quiz items */
+.quiz-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add some spacing between quiz items */
+}
+
+/* quiz: Styling for individual quiz items */
+.quiz {
+    border: 1px solid #e0e0e0; /* Lighter border color */
+    border-radius: 10px; /* Rounder corners */
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s; /* Add smooth hover effect */
+}
+
+/* Apply hover effect on quiz items */
+.quiz:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* quiz title */
+.quiz h2 {
+    font-size: 1.4em; /* Slightly larger title */
+    margin-bottom: 10px;
+}
+
+/* quiz details list */
+.quiz ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* quiz detail item */
+.quiz li {
+    font-size: 1em; /* Larger font for details */
+    color: #777; /* Slightly lighter text color */
+    margin-bottom: 8px;
+}
